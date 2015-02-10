@@ -1,0 +1,131 @@
+/* grid */
+.row {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;
+  margin: 0 auto 0;
+  max-width: 1400px;
+  padding: 0 1.6em;
+
+  & + .row{
+    margin-bottom:1.6em;
+  }
+}
+
+.grid {
+  -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;         /* OLD - Firefox 19- */
+  -webkit-flex: 1;          /* Chrome */
+  -ms-flex: 1;              /* IE 10 */
+  flex: 1; 
+  padding: 0 1.6em;
+}
+
+/*Explicit sizing*/
+.grid-10 {
+  -webkit-box-flex: 0 0 10%;
+  -moz-box-flex: 0 0 10%;
+  -webkit-flex: 0 0 10%;
+  -ms-flex: 0 0 10%;
+  flex: 0 0 10%;
+}
+.grid-25 {
+  -webkit-box-flex: 0 0 25%;
+  -moz-box-flex: 0 0 25%;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+}
+
+.grid-33 {
+    -webkit-box-flex: 0 0 33.33%;
+  -moz-box-flex: 0 0 33.33%;
+  -webkit-flex: 0 0 33.33%;
+  -ms-flex: 0 0 33.33%;
+  flex: 0 0 33.33%;
+}
+
+.grid-40 {
+    -webkit-box-flex: 0 0 40%;
+  -moz-box-flex: 0 0 40%;
+  -webkit-flex: 0 0 40%;
+  -ms-flex: 0 0 40%;
+  flex: 0 0 40%;
+}
+
+.grid-50 {
+    -webkit-box-flex: 0 0 50%;
+  -moz-box-flex: 0 0 50%;
+  -webkit-flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+}
+
+.grid-60 {
+    -webkit-box-flex: 0 0 60%;
+  -moz-box-flex: 0 0 60%;
+  -webkit-flex: 0 0 60%;
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
+}
+.grid-65 {
+    -webkit-box-flex: 0 0 65%;
+  -moz-box-flex: 0 0 65%;
+  -webkit-flex: 0 0 65%;
+  -ms-flex: 0 0 65%;
+  flex: 0 0 65%;
+}
+.grid-75 {
+    -webkit-box-flex: 0 0 75%;
+  -moz-box-flex: 0 0 75%;
+  -webkit-flex: 0 0 75%;
+  -ms-flex: 0 0 75%;
+  flex: 0 0 75%;
+}
+/* Alignment per row */
+.row-left {
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.row-right {
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.row-center {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+
+
+/* Alignment per cell */
+.grid-top {
+  -webkit-align-self: flex-start;
+  -moz-align-self: flex-start;
+  -ms-align-self: flex-start;
+  align-self: flex-start;
+}
+
+.grid-bottom {
+    -webkit-align-self: flex-end;
+  -moz-align-self: flex-end;
+  -ms-align-self: flex-end;
+  align-self: flex-end;
+}
+
+.grid-center {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+  
+}

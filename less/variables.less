@@ -1,0 +1,55 @@
+/*fonts*/
+
+@fontSize: 			112.5%;
+@lineHeight:		1.6em;
+
+
+@sansFontFamily: 'Nunito', sans-serif;
+@headerFontFamily: 'Nunito', sans-serif;
+
+
+/*colors*/
+
+@bgColor:			#FFF;
+@blue:				#0076a3;
+@red:				#e7685d;
+@green:				#8fc4b3;
+@newBlue:           #6eb6c4;
+@ocean:				#303536;
+
+@grayDarkest:			lighten(#000, 10%);
+@grayDark:			#303536;
+@gray:				lighten(#000, 50%);
+@grayLight:			lighten(#000, 65%);
+@grayLighter:		lighten(#000, 90%);
+@grayLightest:		#F2F7F6;
+@faint:     		lighten(#000, 98%);
+@highLight:			rgba(255,255,255,.5);
+@lowLight:			rgba(0,0,0,.075);
+@muteBlue:     desaturate(lighten(@ocean,30%),5%);
+
+.min{
+	color:@grayLight;
+}
+.border-radius{
+	border-radius:.6em;
+}
+.alt{
+	background:@grayLightest;
+}
+.text-center{
+  text-align:center;
+  img&{
+  	margin-left:auto;
+  	margin-right: auto;
+  }
+}
+.text-right{
+  text-align:right;
+}
+.text-left{
+  text-align:left;
+}
+.gravatar{
+	border-radius:50%;
+}

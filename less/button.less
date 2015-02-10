@@ -1,0 +1,46 @@
+.button{
+	display:inline-block;
+
+	padding:.75em 1.5em;
+	
+	background:@green;
+	text-decoration:none;
+	font-family:@headerFontFamily;
+	.border-radius();
+	color:rgba(255,255,255,1);
+	/*margin-bottom: 1.5em;*/
+	transition:all .25s;
+	&.hollow{
+		padding:.6em 1.35em;
+		background:transparent;
+		color:@newBlue;
+		border:3px solid @newBlue;
+
+		&:hover{
+			background:@newBlue;
+			color:white;
+		};
+	}
+	&:hover{
+		color:rgba(255,255,255,.6);
+	};
+	&.white{
+		background:white;
+		color:@blue;
+		&.hollow{
+			background:transparent;
+			border-color:white;
+			color:white;
+			&:hover{
+				background:white;
+				color:@ocean;
+			};
+		}
+	}
+	&.blue{
+		background:@newBlue;
+		
+		/*color:white;*/
+	}
+	
+}

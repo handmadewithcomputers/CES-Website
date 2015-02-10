@@ -1,0 +1,123 @@
+nav{
+		position:fixed;
+		width:100%;
+		padding:2.56em 0; 
+		transition: all .33s;
+		background:darken(@ocean,3%);
+		top:0;
+		z-index: 100;
+		overflow:hidden;
+		
+	
+		.home &{
+			background:transparent;
+		}
+
+		.row{
+			/*max-width:100%;*/
+		}	
+
+		a.logo{
+			
+			margin-bottom:0;
+			display:inline-block;
+			float:left;
+			text-decoration: none;
+			.wordmark{
+				transition: all .33s;
+				opacity:1;
+				position:absolute;
+				line-height:40px;
+				color:white;
+				display:inline-block;
+				margin-left:1em;
+			}
+			img{
+				float:left;
+				transition: all .33s;
+				height:40px;
+				
+
+			}
+			&:hover .wordmark{
+					opacity:1;
+										
+				}
+			
+
+
+		}
+		ul{
+			margin:0 0 0 0;
+			float:right;
+			overflow:hidden;
+			
+			
+		}
+		li{
+			height:40px;
+			display:inline;
+			float:left;
+			margin-left:1.5em;
+			margin-bottom:0;
+			overflow:hidden;
+
+
+			a{
+				display:block;
+				text-decoration:none;
+				line-height:40px;
+				height:100%;
+				font-size:1em;
+				color:lighten(@green,10%);
+				outline:none;
+
+				&:hover{
+					color:white;
+					border-bottom:1px solid white;
+				};
+			}
+
+			
+		}
+
+	}
+body.scroll nav{
+	position:fixed;
+	/*transform:translateY(-100%);*/
+	box-shadow:0 0 10px rgba(0,0,0,.1);
+	background:darken(@ocean,3%);
+	padding:1em 0;
+	.wordmark{
+		opacity:0;
+		line-height:40px;
+	}
+	li{
+		height:40px;
+		a{
+		line-height:40px;
+		}
+	}
+	img{
+		height:40px; 
+	}
+	
+}	
+body.scrollup nav{
+	/*transform:translateY(0px);*/
+	background:darken(@ocean,3%);
+	padding:1em 0; 
+	.wordmark{
+		opacity:0;
+		line-height:40px;
+	}
+	li{
+		height:40px;
+		a{
+		line-height:40px;
+		}
+	}
+	img{
+		height:40px; 
+	}
+}

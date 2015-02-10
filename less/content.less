@@ -1,0 +1,128 @@
+
+section{
+	padding:6.5em 0;
+
+	&.hero{
+		
+		position:relative;
+		color:white;
+		background:@ocean;
+		background-image: url(../img/city.jpg);
+		background-size:cover;
+		
+		background-position: center center;
+		height:80%;
+		min-height:800px;
+		
+		.row{
+			height:100%;
+		}
+
+		h1{
+			text-transform: uppercase;
+			font-size:3.33em;
+			font-weight: 300;
+			display:inline-block;
+			text-align:left;
+			line-height:1.2em;
+			margin:0;
+			
+			
+
+		}
+		
+	}
+	&.intro{
+		h3{
+			text-transform: uppercase;
+			font-size:1em;
+			margin-bottom:1.6em;
+		}
+		i.fa{
+			font-size:2em;
+			height:2em;
+			width:2em;
+			line-height:2.02em;
+			border-radius: 50%;
+			background:@green;
+			color:@grayLightest;
+			margin-bottom:.5em;
+		}
+	}
+	&.core{
+		background-color:@ocean;
+		
+		color:@grayLighter;
+		h2{
+			color:@grayLight;
+		}
+		.row + .row{
+			margin-bottom:4.1em;
+		}
+	}
+	&.break{
+		height:16em;
+		background-color:@ocean;
+		background-size:cover;
+		background-attachment: fixed;
+		background-position:center center;
+	}
+	&.drop{
+		background-image: url(../img/shroom.jpg);
+	}
+	&.beetles{
+		background-image: url(../img/beetles.jpg);
+	}
+	&.mountains{
+		background-image: url(../img/mountains.jpg);
+	}
+			
+}
+
+i.fa{
+	font-size:2.08em;
+	margin-bottom:.25em;
+	color:@green;
+
+}
+.circles{
+	background:@ocean;
+	background-image: url(../img/circles.png);
+	background-position: center top;
+	background-size:cover;
+	background-attachment: fixed;
+	color:lighten(@green,20%);
+	blockquote{
+	  padding-top:1em;
+	  font-size:4.01em;
+	  font-weight:300;
+	  line-height:1em;
+
+	  cite{
+	    font-size:.25em;
+	    display:block;
+	    font-style:normal;
+	    text-align:right;
+	    margin-top:.5em;
+	    color:@green;
+	  }
+	}
+}
+.circle-bg{
+	background-image: url(../img/circleClear.png);
+	background-position: left bottom;
+	background-repeat:no-repeat;
+	/*background-size:cover;*/
+}
+
+figure{
+	padding:1.6em 0;	
+}
+figcaption{
+	line-height:1.6em;
+	padding-top:1.6em;
+	font-weight:300;
+	color:@grayLight;
+}
+
+
