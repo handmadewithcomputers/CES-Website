@@ -9,7 +9,70 @@
     
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' />
-  
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script>
+        google.load("visualization", "1.1", {packages:["sankey"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'From');
+        data.addColumn('string', 'To');
+        data.addColumn('number', 'Weight');
+        data.addRows([
+          [ 'DURABLE PRODUCTS', 'RECOVERED', 17 ],
+          [ 'DURABLE PRODUCTS', 'DISCARDED', 42 ],
+          [ 'NONDURABLE PRODUCTS', 'RECOVERED', 33 ],
+          [ 'NONDURABLE PRODUCTS', 'DISCARDED', 34 ],
+          [ 'CONTAINERS & PACKAGING', 'RECOVERED', 50 ],
+          [ 'CONTAINERS & PACKAGING', 'DISCARDED', 24 ],
+          [ 'RECOVERED', 'PAPER & BOARD', 67],
+          [ 'RECOVERED', 'METALS', 12],
+          [ 'RECOVERED', 'PLASTICS', 4],
+          [ 'RECOVERED', 'WOOD', 4],
+          [ 'RECOVERED', 'RUBBER, LEATHER & TEXTILES', 8],
+          [ 'RECOVERED', 'GLASS', 5],
+          [ 'DISCARDED', 'PAPER & BOARD', 23],
+          [ 'DISCARDED', 'METALS', 14],
+          [ 'DISCARDED', 'PLASTICS', 27],
+          [ 'DISCARDED', 'WOOD', 12],
+          [ 'DISCARDED', 'RUBBER, LEATHER & TEXTILES', 17],
+          [ 'DISCARDED', 'GLASS', 8],
+          [ 'PAPER & BOARD', 'LANDFILL', 8],
+          [ 'PAPER & BOARD', 'ENERGY RECOVERY', 13],  
+          [ 'PAPER & BOARD', 'RECYCLING', 39],        
+          [ 'METALS', 'LANDFILL', 17],
+          [ 'METALS', 'ENERGY RECOVERY', 0],  
+          [ 'METALS', 'RECYCLING', 20],
+          [ 'PLASTICS', 'LANDFILL', 20],
+          [ 'PLASTICS', 'ENERGY RECOVERY', 31],  
+          [ 'PLASTICS', 'RECYCLING', 5],
+          [ 'WOOD', 'LANDFILL', 19],
+          [ 'WOOD', 'ENERGY RECOVERY', 28],  
+          [ 'WOOD', 'RECYCLING', 9],
+          [ 'RUBBER, LEATHER & TEXTILES', 'LANDFILL', 18],
+          [ 'RUBBER, LEATHER & TEXTILES', 'ENERGY RECOVERY', 28],  
+          [ 'RUBBER, LEATHER & TEXTILES', 'RECYCLING', 10],
+          [ 'GLASS', 'LANDFILL', 18],
+          [ 'GLASS', 'ENERGY RECOVERY', 0],  
+          [ 'GLASS', 'RECYCLING', 17]
+        ]);
+
+        // Sets chart options.
+        var options = {
+          width: 900,
+          height:500,
+            sankey: {
+        link: { color: { fill: '#8fc4b3', fillOpacity: 0.6 } },
+        node: { color: { fill: '#333333' },
+                label: { color: '#871b47' } },
+            }
+        };
+
+        // Instantiates and draws our chart, passing in some options.
+        var chart = new google.visualization.Sankey(document.getElementById('sankey'));
+        chart.draw(data, options);
+      }</script>
     <link rel="stylesheet" href="./css/style.css" />
     
 </head>
@@ -143,16 +206,29 @@
   <div class="row">
     <div class="grid text-center">
       <figure>
-      <iframe width="800" height="500" src="https://www.youtube.com/embed/zCRKvDyyHmI" frameborder="0" allowfullscreen></iframe>
-<p>Source: Ellen MacArthur Foundation</p>
-   <figcaption>Globally, Circular Economy could save $700B in material costs alone, annually. - World Economic Forum, 2014
-        </figcaption>
-   </figure>
+        <iframe width="800" height="500" src="https://www.youtube.com/embed/zCRKvDyyHmI" frameborder="0" allowfullscreen></iframe>
+        <figcaption>Source: Ellen MacArthur Foundation</figcaption>
+      </figure>
+    </div>
+  </div>
+  
+</section>
+<section class="beetles">
+  <div class="row">
+    <div class="grid text-center">
+      <blockquote>
+        Globally, Circular Economy could save $700B in material costs alone, annually <cite>- World Economic Forum, 2014</cite>
+      </blockquote>
     </div>
   </div>
 </section>
-<section class="break beetles">
-  
+<section class="alt">
+  <div class="row row-center"> 
+      <div class="grid grid-75">
+        <p> Today’s material consumption-based economic growth is incredibly wasteful as depicted in this material flow for durable products, non-durable products, and container and packaging waste generated in the USA in 2012.</p>
+        <div id="sankey"></div>
+      </div>
+    </div>
 </section>
 <section>
   <div class="row row-center">
@@ -167,7 +243,8 @@
           <h3 class="text-center">materials &middot; energy &middot; water &middot; ecosystem &middot; climate change &middot; community </h3>  
     
       </div>
-    </div>      
+    </div>
+          
     <div class="row row-center">
       <div class="grid grid-75">
       
@@ -176,6 +253,7 @@
         </p>
     </div>
   </div>
+  
 </section>
 <section class="core" id="core">
   <div class="row">
