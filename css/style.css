@@ -549,6 +549,9 @@ section.drop {
 }
 section.beetles {
   background-image: url(../img/beetles.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 section.beetles blockquote {
   color: #d2e7e0;
